@@ -21,7 +21,7 @@ function validateForm(){
         if(nombre.substring(0,1)==nombre.substring(0,1).toUpperCase()){
             return true;
         }else{
-            alert("Debe comenzar con Mayuscula");
+            alert("El campo debe comenzar con Mayuscula");
             return false;
         }
     }
@@ -62,9 +62,12 @@ function validateForm(){
         return false;
 
     }
-    var opcion = document.getElementsByTagName("select")[0].value;
-    if(opcion == "0") {
-        alert("Elija una opcion de la lista");
-    }
-   
+
+    function seleccion(){
+		var valor = document.querySelector('select').value;
+		if( valor == null || valor == '0' ){
+	  		alert("Debes seleccionar un tipo de bici.");
+		}
+	}
+   	seleccion();
 }
